@@ -32,14 +32,14 @@ points++;
 points++;
 points++;
 
-console.log(points);13
+console.log(points); // 13
 points--;
 points--;
 points--;
 points--;
 points--;
 
-console.log(points);8
+console.log(points); // 8
 // Challenge
 [++a]
 
