@@ -28,3 +28,23 @@ console.log(Math.trunc(flt)); // 10
 console.log(); // 10
 // task7
 console.log(Math.floor(Math.random() * 5));
+
+
+// Challenge
+let a =1_00;
+let b =2_00.5;
+let c =1e2;
+let d =2.4;
+
+console.log(Math.trunc(d));
+console.log(Math.floor(d));
+// task2
+console.log(100**Math.round(2.4))
+// task3
+console.log(parseInt(2.4));
+console.log(Math.floor(2.4));
+console.log(Math.round(2.4));
+console.log(Math.trunc(2.4));
+// task4
+console.log((b / Math.ceil(d)).toFixed(2)); // "66.67"
+console.log(Math.ceil(b / Math.ceil(d)));   // 67
