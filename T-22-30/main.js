@@ -25,10 +25,8 @@ console.log(parseInt(flt))// 10
 console.log(Math.floor(flt)); // 10
 console.log(Math.round(flt)); // 10
 console.log(Math.trunc(flt)); // 10
-console.log(); // 10
 // task7
 console.log(Math.floor(Math.random() * 5));
-
 
 // Challenge
 let a =1_00;
@@ -46,5 +44,22 @@ console.log(Math.floor(2.4));
 console.log(Math.round(2.4));
 console.log(Math.trunc(2.4));
 // task4
-console.log((b / Math.ceil(d)).toFixed(2)); // "66.67"
+console.log((Math.floor(b) / Math.ceil(d)).toFixed(2)); // "66.67"
 console.log(Math.ceil(b / Math.ceil(d)));   // 67
+// task1 27\30
+let userName = "Elzero";
+console.log(userName.charAt(3).toLowerCase()); // e
+console.log(userName[0].toLowerCase()); // e
+console.log(userName.slice(0, 1).toLowerCase()); // e
+console.log(userName.substring(0, 1).toLowerCase()); // e
+console.log(userName.substr(0, 1).toLowerCase()); // e
+console.log(userName[0].toLowerCase().repeat(3)); // eee
+// task2
+let word = "Elzero";
+let letterZ = "z";
+let letterE = "e";
+let letterO = "O";
+
+console.log(word.includes(letterZ)); // true
+console.log(word.startsWith(letterE.toUpperCase())); // true
+console.log(word.endsWith(letterO.toLowerCase())); // true
