@@ -43,3 +43,4 @@ let postTitle = "Elzero",
   </div>
 `;
 document.body.innerHTML = card.repeat(4);
+   
