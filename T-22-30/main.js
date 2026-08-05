@@ -63,3 +63,12 @@ let letterO = "O";
 console.log(word.includes(letterZ)); // true
 console.log(word.startsWith(letterE.toUpperCase())); // true
 console.log(word.endsWith(letterO.toLowerCase())); // true
+
+//  Challenge30
+let Z = "Elzero web school"
+
+console.log(Z.charAt(3) + Z.slice(3, 6));
+console.log(Z.charAt(13).repeat(8));
+console.log(Z.slice(0, 6).split(" "));
+console.log(`${Z.substr(0, 6)} ${Z.substr(11, 6)}`);
+console.log(Z.charAt(0).toLowerCase() + Z.slice(1).toUpperCase());
