@@ -32,3 +32,49 @@ console.log(
     .slice(words.length)
     .toUpperCase()
 );
+let needle = "JS";
+let haystack = ["PHP", "JS", "Python"];
+
+// Solution 1: includes()
+if (haystack.includes(needle)) {
+  console.log("Found");
+}
+
+// Solution 2: indexOf()
+if (haystack.indexOf(needle) !== -1) {
+  console.log("Found");
+}
+
+// Solution 3: find()
+if (haystack.find(function (item) {
+  return item === needle;
+})) {
+  console.log("Found");
+}
+// task2
+let arr1 = ["A", "C", "X"];
+let arr2 = ["D", "E", "F", "Y"];
+let allArrs = [];
+
+allArrs = [
+  ...arr2.slice(-"XX".length, -"X".length),
+  ...arr1.slice(-"X".length),
+  ...arr2.slice(-"X".length)
+].join("").toLowerCase();
+
+console.log(allArrs); // fxy
+// task3
+let zero = 0;
+let counter = 3;
+
+let my = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+
+counter++;
+
+my = my.slice(zero, counter).reverse();
+
+console.log(my);
+
+console.log(my.slice(++zero, --counter)); // ["Elham", "Mazero"]
+console.log(my.find(name => name.startsWith("El")).replace("ham", "zero"));
+console.log(my.find(name => name.startsWith("Os")).split("").reverse().join("").replace("amasO", "rO"));
