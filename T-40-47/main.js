@@ -32,26 +32,27 @@ console.log(
     .slice(words.length)
     .toUpperCase()
 );
+// task5
 let needle = "JS";
 let haystack = ["PHP", "JS", "Python"];
 
-// Solution 1: includes()
+
 if (haystack.includes(needle)) {
   console.log("Found");
 }
 
-// Solution 2: indexOf()
+
 if (haystack.indexOf(needle) !== -1) {
   console.log("Found");
 }
 
-// Solution 3: find()
+// task6
 if (haystack.find(function (item) {
   return item === needle;
 })) {
   console.log("Found");
 }
-// task2
+// task6
 let arr1 = ["A", "C", "X"];
 let arr2 = ["D", "E", "F", "Y"];
 let allArrs = [];
@@ -63,7 +64,8 @@ allArrs = [
 ].join("").toLowerCase();
 
 console.log(allArrs); // fxy
-// task3
+// Challenge
+
 let zero = 0;
 let counter = 3;
 
