@@ -1,4 +1,4 @@
-// // task1
+// // // task1
 function sayHello(theName, theGender) {
     if (theGender === "Male") {
         console.log(`Hello Mr ${theName}`);
@@ -11,7 +11,7 @@ function sayHello(theName, theGender) {
 sayHello("Osama", "Male"); // Hello Mr Osama
 sayHello("Eman", "Female"); // Hello Miss Eman
 sayHello("Sameh");// "Hello Sameh"
-// // task2
+// // // task2
 
 function calculate(firstNum, secondNum, operation) {
     if (secondNum === undefined) {
@@ -32,7 +32,7 @@ calculate(20, 30, 'add'); // 50
 calculate(20, 30, 'subtract'); // -10
 calculate(20, 30, 'multiply'); // 600
 
-// // task3
+// // // task3
 function ageInTime(theAge) {
     if (theAge <= 10 || theAge >= 100) {
         console.log("Age Out Of Range");
@@ -84,7 +84,7 @@ checkStatus(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Availab
 checkStatus(true, 38, "Osama");
 checkStatus(false, "Osama", 38);
 
-// task5
+// // task5
 function createSelectBox(startYear, endYear) {
   let select = document.createElement("select");
   for (let Year = startYear; Year <= endYear; Year++){
@@ -142,7 +142,7 @@ showDetails(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Availab
 showDetails(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
 showDetails(false, "Osama", 38);
 
-// 64-70 task1
+// // 64-70 task1
 function getDetails(zName, zAge, zCountry) {
     function namePattern(zName) {
         let name1 = zName.split(" ");
@@ -163,7 +163,7 @@ function getDetails(zName, zAge, zCountry) {
 }
 console.log(getDetails("Osama Mohamed", "38 Is My Age", "Egypt"));
 console.log(getDetails("Ahmed", "24 Is The Age", "Syria"));
-// task2
+// // task2
 const itsMe = () => {
     return `Iam A Normal Function`
 
@@ -173,7 +173,7 @@ const urlCreate =(protocol, web, tld) =>{
     return`${protocol}://www.${web}.${tld}`;
 }
  console.log(urlCreate("https","elzero","org"));
- // task3
+//  // task3
 const checker =(zName) => {
      return(status) =>{
     return (salary)=>{
@@ -208,3 +208,28 @@ console.log(specialMix(10, 20, 30)); // 60
 console.log(specialMix("10Test", "Testing", "20Cool")); // 30
 console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
 console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
+// // Challenge70
+let names = function(...names){
+    return`[${names.join("], [")}] => Done!`;
+};
+console.log(names("Osama","Mohmed","Ali","Ibrahim"));
+// Arrow
+let names2 =(...names2) =>{
+    return`[${names2.join("], [")}] => Done!`;
+};
+console.log(names2("Osama","Mohmed","Ali","Ibrahim"));
+// Challenge2
+let myNumbers2 =[20, 50, 10, 60];
+let [first, second, third] = myNumbers2;
+let calc = function  (one, two, ...nums){
+return one + two + +nums;
+};
+console.log(calc(third, first, second));
+// Arrow2
+let myNumbers3 = [20, 50, 10, 60];
+
+ let [first1, second1, third1] = myNumbers3;
+
+ let calc1 = (one, two, ...nums) => one + two + +nums; 
+
+ console.log(calc1(third1, first1, second1));
