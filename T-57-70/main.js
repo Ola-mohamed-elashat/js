@@ -1,4 +1,4 @@
-// // // task1
+// task1
 function sayHello(theName, theGender) {
     if (theGender === "Male") {
         console.log(`Hello Mr ${theName}`);
@@ -11,7 +11,7 @@ function sayHello(theName, theGender) {
 sayHello("Osama", "Male"); // Hello Mr Osama
 sayHello("Eman", "Female"); // Hello Miss Eman
 sayHello("Sameh");// "Hello Sameh"
-// // // task2
+// task2
 
 function calculate(firstNum, secondNum, operation) {
     if (secondNum === undefined) {
@@ -25,7 +25,7 @@ function calculate(firstNum, secondNum, operation) {
     } else {
         console.log(firstNum + secondNum);
     }
-}
+};
 calculate(20); // Second Number Not Found
 calculate(20, 30); // 50
 calculate(20, 30, 'add'); // 50
@@ -47,7 +47,7 @@ function ageInTime(theAge) {
 }
 ageInTime(100); // Age Out Of Range
 ageInTime(24); // Months Example => 456 Months
-// // task4
+// task4
 function checkStatus(a, b, c) {
     let name;
     let age;
@@ -84,7 +84,7 @@ checkStatus(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Availab
 checkStatus(true, 38, "Osama");
 checkStatus(false, "Osama", 38);
 
-// // task5
+//task5
 function createSelectBox(startYear, endYear) {
   let select = document.createElement("select");
   for (let Year = startYear; Year <= endYear; Year++){
@@ -96,7 +96,7 @@ select.appendChild(option);
   document.body.appendChild(select);
 }
 createSelectBox(2002, 2026);
-// // task6
+//task6
 function multiply() {
   let result = 1;
 
@@ -142,7 +142,7 @@ showDetails(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Availab
 showDetails(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
 showDetails(false, "Osama", 38);
 
-// // 64-70 task1
+//  64-70 task1
 function getDetails(zName, zAge, zCountry) {
     function namePattern(zName) {
         let name1 = zName.split(" ");
@@ -163,7 +163,7 @@ function getDetails(zName, zAge, zCountry) {
 }
 console.log(getDetails("Osama Mohamed", "38 Is My Age", "Egypt"));
 console.log(getDetails("Ahmed", "24 Is The Age", "Syria"));
-// // task2
+//  task2
 const itsMe = () => {
     return `Iam A Normal Function`
 
@@ -173,7 +173,7 @@ const urlCreate =(protocol, web, tld) =>{
     return`${protocol}://www.${web}.${tld}`;
 }
  console.log(urlCreate("https","elzero","org"));
-//  // task3
+//  task3
 const checker =(zName) => {
      return(status) =>{
     return (salary)=>{
@@ -208,7 +208,8 @@ console.log(specialMix(10, 20, 30)); // 60
 console.log(specialMix("10Test", "Testing", "20Cool")); // 30
 console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
 console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
-// // Challenge70
+
+//Challenge70
 let names = function(...names){
     return`[${names.join("], [")}] => Done!`;
 };
@@ -233,3 +234,25 @@ let myNumbers3 = [20, 50, 10, 60];
  let calc1 = (one, two, ...nums) => one + two + +nums; 
 
  console.log(calc1(third1, first1, second1));
+function sayWelcome(name){
+    return `hello ${name}` 
+}
+// console.log(sayWelcome("ola"))
+// function sum(num1, num2) {
+// return(num1+ num2)
+// }
+// console.log(sum(10, 20));
+// function checkAge (age){
+//     if(age >=18){
+//         return"Adult"
+//     }else{
+//            return"Young"
+//     }
+// }
+// console.log(checkAge(20));
+// console.log(checkAge(15));
+
+// function getFirstName(fullName){
+// return fullName.split(" ")[0];
+// }
+// console.log(getFirstName("Ola Mohamed"));
