@@ -1,4 +1,4 @@
-// task1
+// // task1
 function sayHello(theName, theGender) {
     if (theGender === "Male") {
         console.log(`Hello Mr ${theName}`);
@@ -11,7 +11,7 @@ function sayHello(theName, theGender) {
 sayHello("Osama", "Male"); // Hello Mr Osama
 sayHello("Eman", "Female"); // Hello Miss Eman
 sayHello("Sameh");// "Hello Sameh"
-// task2
+// // task2
 
 function calculate(firstNum, secondNum, operation) {
     if (secondNum === undefined) {
@@ -32,7 +32,7 @@ calculate(20, 30, 'add'); // 50
 calculate(20, 30, 'subtract'); // -10
 calculate(20, 30, 'multiply'); // 600
 
-// task3
+// // task3
 function ageInTime(theAge) {
     if (theAge <= 10 || theAge >= 100) {
         console.log("Age Out Of Range");
@@ -47,7 +47,7 @@ function ageInTime(theAge) {
 }
 ageInTime(100); // Age Out Of Range
 ageInTime(24); // Months Example => 456 Months
-// task4
+// // task4
 function checkStatus(a, b, c) {
     let name;
     let age;
@@ -83,6 +83,7 @@ checkStatus("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Availab
 checkStatus(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
 checkStatus(true, 38, "Osama");
 checkStatus(false, "Osama", 38);
+
 // task5
 function createSelectBox(startYear, endYear) {
   let select = document.createElement("select");
@@ -95,7 +96,7 @@ select.appendChild(option);
   document.body.appendChild(select);
 }
 createSelectBox(2002, 2026);
-// task6
+// // task6
 function multiply() {
   let result = 1;
 
@@ -109,3 +110,101 @@ function multiply() {
 console.log(multiply(10, 20));//200
 console.log(multiply("A", 10, 30));//300
 console.log(multiply(100.5, 10, "B"));//1000
+// Challenge t-57-63
+function showDetails(a, b, c) {
+let name;
+let age;
+let status;
+for (let i = 0; i< arguments.length; i++){
+    switch(typeof arguments[i]){
+        case"string":
+        name = arguments[i];
+        break;
+
+         case"number":
+        age = arguments[i];
+        break;
+
+         case"boolean":
+        status = arguments[i];
+        break;
+
+    }
+}
+  console.log(
+    `Hello ${name}, Your Age Is ${age}, You Are ${
+      status ? "Available" : "Not Available"
+    } For Hire`
+  );
+}
+showDetails("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails(true, 38, "Osama"); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
+showDetails(false, "Osama", 38);
+
+// 64-70 task1
+function getDetails(zName, zAge, zCountry) {
+    function namePattern(zName) {
+        let name1 = zName.split(" ");
+        return `${name1[0]} ${name1[1] ? name1[1][0]?.toUpperCase() : ''}.`;
+    }
+    function ageWithMessage(zAge) {
+        let age = parseInt(zAge);
+        return `Your Age Is ${age}`;
+    }
+    function countryTwoLetters(zCountry) {
+        let Country = zCountry.slice(0, 2).toUpperCase();
+        return `You Live In ${Country}`;
+    }
+    function fullDetails() {
+        return `Hello ${namePattern(zName)},${ageWithMessage(zAge)}, ${countryTwoLetters(zCountry)}`;
+    }
+    return fullDetails()
+}
+console.log(getDetails("Osama Mohamed", "38 Is My Age", "Egypt"));
+console.log(getDetails("Ahmed", "24 Is The Age", "Syria"));
+// task2
+const itsMe = () => {
+    return `Iam A Normal Function`
+
+};
+  console.log(itsMe());
+const urlCreate =(protocol, web, tld) =>{
+    return`${protocol}://www.${web}.${tld}`;
+}
+ console.log(urlCreate("https","elzero","org"));
+ // task3
+const checker =(zName) => {
+     return(status) =>{
+    return (salary)=>{
+  return status === "Available" 
+  ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`;
+    };
+};
+};
+console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
+console.log(checker("Ahmed")("Not Available")());
+ // task4
+console.log(specialMix("10Test", "Testing", "20Cool"));
+
+function specialMix(...data) {
+let result1 =0;
+let hasNumber = false;
+for (let i = 0; i< data.length; ++i){
+    if(typeof data[i] === "number"){
+        result1 += data[i];
+        hasNumber = true;
+    }else if(typeof data[i] === "string"){
+        let number = parseInt(data[i]);
+        if(!isNaN(number)){
+            result1 += number;
+            hasNumber =true;
+        }
+    }
+}
+return hasNumber ? result1: "All Is Strings";
+}
+console.log(specialMix(10, 20, 30)); // 60
+console.log(specialMix("10Test", "Testing", "20Cool")); // 30
+console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
+console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
