@@ -107,9 +107,9 @@ let solution = myString3
   })
   .filter(function (ele, index, arr) {
     return (
-      isNaN(parseInt(ele)) &&
-      ele !== "," &&
-      !ele.includes(arr[arr.length - true])
+      isNaN(parseInt(ele))
+      && ele !== ","
+      && !ele.includes(arr[arr.length - true])
     );
   })
   .reduce(function (acc, current) {
