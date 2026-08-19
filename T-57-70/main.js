@@ -86,56 +86,55 @@ checkStatus(false, "Osama", 38);
 
 //task5
 function createSelectBox(startYear, endYear) {
-  let select = document.createElement("select");
-  for (let Year = startYear; Year <= endYear; Year++){
-    let option = document.createElement("option");
-option.textContent = Year;
-select.appendChild(option);
+    let select = document.createElement("select");
+    for (let Year = startYear; Year <= endYear; Year++) {
+        let option = document.createElement("option");
+        option.textContent = Year;
+        select.appendChild(option);
 
-  }
-  document.body.appendChild(select);
+    }
+    document.body.appendChild(select);
 }
 createSelectBox(2002, 2026);
 //task6
 function multiply() {
-  let result = 1;
+    let result = 1;
 
-  for (let i = 0; i < arguments.length; i++) {
-    if (typeof arguments[i] === "number") {
-      result = result * Math.trunc(arguments[i]);
+    for (let i = 0; i < arguments.length; i++) {
+        if (typeof arguments[i] === "number") {
+            result = result * Math.trunc(arguments[i]);
+        }
     }
-  }
-  return result;
+    return result;
 }
 console.log(multiply(10, 20));//200
 console.log(multiply("A", 10, 30));//300
 console.log(multiply(100.5, 10, "B"));//1000
 // Challenge t-57-63
 function showDetails(a, b, c) {
-let name;
-let age;
-let status;
-for (let i = 0; i< arguments.length; i++){
-    switch(typeof arguments[i]){
-        case"string":
-        name = arguments[i];
-        break;
+    let name;
+    let age;
+    let status;
+    for (let i = 0; i < arguments.length; i++) {
+        switch (typeof arguments[i]) {
+            case "string":
+                name = arguments[i];
+                break;
 
-         case"number":
-        age = arguments[i];
-        break;
+            case "number":
+                age = arguments[i];
+                break;
 
-         case"boolean":
-        status = arguments[i];
-        break;
+            case "boolean":
+                status = arguments[i];
+                break;
 
+        }
     }
-}
-  console.log(
-    `Hello ${name}, Your Age Is ${age}, You Are ${
-      status ? "Available" : "Not Available"
-    } For Hire`
-  );
+    console.log(
+        `Hello ${name}, Your Age Is ${age}, You Are ${status ? "Available" : "Not Available"
+        } For Hire`
+    );
 }
 showDetails("Osama", 38, true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
 showDetails(38, "Osama", true); // "Hello Osama, Your Age Is 38, You Are Available For Hire"
@@ -168,41 +167,41 @@ const itsMe = () => {
     return `Iam A Normal Function`
 
 };
-  console.log(itsMe());
-const urlCreate =(protocol, web, tld) =>{
-    return`${protocol}://www.${web}.${tld}`;
+console.log(itsMe());
+const urlCreate = (protocol, web, tld) => {
+    return `${protocol}://www.${web}.${tld}`;
 }
- console.log(urlCreate("https","elzero","org"));
+console.log(urlCreate("https", "elzero", "org"));
 //  task3
-const checker =(zName) => {
-     return(status) =>{
-    return (salary)=>{
-  return status === "Available" 
-  ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`;
+const checker = (zName) => {
+    return (status) => {
+        return (salary) => {
+            return status === "Available"
+                ? `${zName}, My Salary Is ${salary}` : `Iam Not Avaialble`;
+        };
     };
-};
 };
 console.log(checker("Osama")("Available")(4000)); // Osama, My Salary Is 4000
 console.log(checker("Ahmed")("Not Available")());
- // task4
+// task4
 console.log(specialMix("10Test", "Testing", "20Cool"));
 
 function specialMix(...data) {
-let result1 =0;
-let hasNumber = false;
-for (let i = 0; i< data.length; ++i){
-    if(typeof data[i] === "number"){
-        result1 += data[i];
-        hasNumber = true;
-    }else if(typeof data[i] === "string"){
-        let number = parseInt(data[i]);
-        if(!isNaN(number)){
-            result1 += number;
-            hasNumber =true;
+    let result1 = 0;
+    let hasNumber = false;
+    for (let i = 0; i < data.length; ++i) {
+        if (typeof data[i] === "number") {
+            result1 += data[i];
+            hasNumber = true;
+        } else if (typeof data[i] === "string") {
+            let number = parseInt(data[i]);
+            if (!isNaN(number)) {
+                result1 += number;
+                hasNumber = true;
+            }
         }
     }
-}
-return hasNumber ? result1: "All Is Strings";
+    return hasNumber ? result1 : "All Is Strings";
 }
 console.log(specialMix(10, 20, 30)); // 60
 console.log(specialMix("10Test", "Testing", "20Cool")); // 30
@@ -210,32 +209,32 @@ console.log(specialMix("Testing", "10Testing", "40Cool")); // 50
 console.log(specialMix("Test", "Cool", "Test")); // All Is Strings
 
 //Challenge70
-let names = function(...names){
-    return`[${names.join("], [")}] => Done!`;
+let names = function (...names) {
+    return `[${names.join("], [")}] => Done!`;
 };
-console.log(names("Osama","Mohmed","Ali","Ibrahim"));
+console.log(names("Osama", "Mohmed", "Ali", "Ibrahim"));
 // Arrow
-let names2 =(...names2) =>{
-    return`[${names2.join("], [")}] => Done!`;
+let names2 = (...names2) => {
+    return `[${names2.join("], [")}] => Done!`;
 };
-console.log(names2("Osama","Mohmed","Ali","Ibrahim"));
+console.log(names2("Osama", "Mohmed", "Ali", "Ibrahim"));
 // Challenge2
-let myNumbers2 =[20, 50, 10, 60];
+let myNumbers2 = [20, 50, 10, 60];
 let [first, second, third] = myNumbers2;
-let calc = function  (one, two, ...nums){
-return one + two + +nums;
+let calc = function (one, two, ...nums) {
+    return one + two + +nums;
 };
 console.log(calc(third, first, second));
 // Arrow2
 let myNumbers3 = [20, 50, 10, 60];
 
- let [first1, second1, third1] = myNumbers3;
+let [first1, second1, third1] = myNumbers3;
 
- let calc1 = (one, two, ...nums) => one + two + +nums; 
+let calc1 = (one, two, ...nums) => one + two + +nums;
 
- console.log(calc1(third1, first1, second1));
-function sayWelcome(name){
-    return `hello ${name}` 
+console.log(calc1(third1, first1, second1));
+function sayWelcome(name) {
+    return `hello ${name}`
 }
 // console.log(sayWelcome("ola"))
 // function sum(num1, num2) {
