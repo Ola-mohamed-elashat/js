@@ -92,5 +92,5 @@ for (let i = 0; i < objectLength; i++) {
     console.log(`Third => ${myFavGames[Object.keys(myFavGames)[i]].bestThree.three}`);
 
   }
-  console.log("#".repeat(20));
+  console.log("#".repeat(15));
 }
