@@ -34,12 +34,12 @@ console.log(elementByChildNodes);
 // task2
 let images = document.getElementsByTagName("img");
 
-// for (let i = 0; i < images.length; i++){
-// images[i].src ="https://elzero.org/wp-content/themes/elzero/imgs/logo.png";
-// images[i].alt = "Elzero Logo";
-// images[i].style.backgroundColor = "red";
-//  console.log(images[i]);
-// }
+for (let i = 0; i < images.length; i++){
+images[i].src ="https://elzero.org/wp-content/themes/elzero/imgs/logo.png";
+images[i].alt = "Elzero Logo";
+images[i].style.backgroundColor = "red";
+ console.log(images[i]);
+}
 // 2
 // const imagefor = document.querySelectorAll('img');
 // // console.log(images1);
@@ -81,3 +81,30 @@ for (let i = 0; i < images1.length; i++) {
     images1[i].alt = "Elzero New";
   }
 }
+// task6
+let forms = document.querySelectorAll("form");
+
+let form = forms[1];
+
+let number = form.querySelector("[name='elements']");
+let text = form.querySelector("[name='texts']");
+let type = form.querySelector("[name='type']");
+let results = form.querySelector(".results");
+
+form.onsubmit = function (e) {
+    e.preventDefault();
+
+    results.innerHTML = "";
+
+    for (let i = 1; i <= Number(number.value); i++) {
+
+        let element = document.createElement(type.value);
+
+        element.className = "box";
+        element.title = "Element";
+        element.id = `id-${i}`;
+        element.textContent = text.value;
+
+        results.appendChild(element);
+    }
+};
