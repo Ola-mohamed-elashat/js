@@ -71,7 +71,7 @@ one.textContent = two.textContent
  one.title = two.title;
  two.title = tempTitle;
 //  console.log(two.className);
-two.textContent = two.textContent + [one, two].length;
+two.textContent += [one, two].length;
 // task5
 let images1 = document.querySelectorAll(".test-images1 img");
 
