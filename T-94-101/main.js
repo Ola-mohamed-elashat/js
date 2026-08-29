@@ -39,24 +39,24 @@
 // };
 // showClasses();
 // // task3
-// let element = document.querySelector(".our-element");
-// let paragraph = document.querySelector("p");
-// paragraph.remove();
-// let start = document.createElement("div");
-// start.className = "start";
-// start.title = "Start Element";
-// start.dataset.value = "Start";
-// start.textContent = "Start";
+let element = document.querySelector(".our-element");
+let paragraph = document.querySelector("p");
+paragraph.remove();
+let start = document.createElement("div");
+start.className = "start";
+start.title = "Start Element";
+start.dataset.value = "Start";
+start.textContent = "Start";
 
-// element.before(start);
+element.before(start);
 
-// let end = document.createElement("div");
-// end.className = "end";
-// end.title = "End Element";
-// end.dataset.value = "End";
-// end.textContent = "End";
+let end = document.createElement("div");
+end.className = "end";
+end.title = "End Element";
+end.dataset.value = "End";
+end.textContent = "End";
 
-// element.after(end);
+element.after(end);
 // // task4
 // let div = document.querySelector(".elzero-text");
 
