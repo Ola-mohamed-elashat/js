@@ -10,6 +10,16 @@
     rel="stylesheet">
 
 <body>
+    <style>
+    body { font-family: Arial, sans-serif; background-color: #eee; }
+    .container { width: 500px; margin: 20px auto; }
+    .form { background-color: #fff; padding: 20px; border-radius: 6px; display: flex; text-align: center; }
+    .input { padding: 10px; border: 1px solid #ddd; border-radius: 6px; flex: 1; margin-right: 10px; outline: none; }
+    .add { border: none; background-color: #f44336; color: white; padding: 10px; border-radius: 6px; cursor: pointer; }
+    .tasks { background-color: #fff; margin-top: 20px; border-radius: 6px; padding: 20px; }
+    .task { display: flex; justify-content: space-between; align-items: center; background-color: #eee; padding: 10px; border-radius: 6px; margin-bottom: 10px; }
+    .task .del { background-color: red; color: white; padding: 4px 10px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+  </style>
     <select id="font" title="choose font">
         <option>Open Sans</option>
         <option>Cairo</option>
@@ -54,6 +64,13 @@
             <option value="Kuwait">Kuwait</option>
         </select>
     </form>
+    <div class="container">
+    <div class="form">
+      <input type="text" class="input" />
+      <input type="submit" class="add" value="Add Task" />
+    </div>
+    <div class="tasks"></div>
+  </div>
     <script src="main.js"></script>
 </body>
 
