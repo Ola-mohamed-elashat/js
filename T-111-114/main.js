@@ -62,64 +62,61 @@ country.value = sessionStorage.getItem("country") || "";
 let input = document.querySelector(".input");
 let submit = document.querySelector(".add");
 let tasksDiv = document.querySelector(".tasks");
+
 let arrayOfTasks = [];
 if (localStorage.getItem("tasks")) {
     arrayOfTasks = JSON.parse(localStorage.getItem("tasks"));
 }
 getDataFromLocalStorage();
+
 submit.onclick = function () {
     if (input.value !== "") {
-        addTaskToArray(input.value);    
-        input.value = ""; 
+        addTaskToArray(input.value);
+        input.value = "";
     }
 };
-tasksDiv.addEventListener("click", (e) => {
-    if (e.target.classList.contains("del")) {
-        deleteTaskWith(e.target.parentElement.getAttribute("data-id"));
-        e.target.parentElement.remove();
-    }
-});
-
 function addTaskToArray(taskText) {
-    const task = {
-        id: Date.now(),
-        title: taskText,
-        completed: false,
-    };
-    arrayOfTasks.push(task);
+    let tssk = {
+        id: Math.floor(Math.random() * 100000000000),
+        title: taskText
+    }
+    arrayOfTasks.push(tssk);
     addElementsToPageFrom(arrayOfTasks);
     addDataToLocalStorageFrom(arrayOfTasks);
-}
-function addElementsToPageFrom(arrayOfTasks) {
+};
+function addElementsToPageFrom(array) {
     tasksDiv.innerHTML = "";
-
-    arrayOfTasks.forEach((task) => {
+    array.forEach(function (task) {
         let div = document.createElement("div");
         div.className = "task";
         div.setAttribute("data-id", task.id);
         div.appendChild(document.createTextNode(task.title));
-
         let span = document.createElement("span");
-        span.className = "del";
+        span.className = "delete";
         span.appendChild(document.createTextNode("Delete"));
         div.appendChild(span);
-
         tasksDiv.appendChild(div);
-    });
+    })
+};
+function addDataToLocalStorageFrom(array) {
+    localStorage.setItem("tasks", JSON.stringify(array));
 }
-
-function addDataToLocalStorageFrom(arrayOfTasks) {
-    window.localStorage.setItem("tasks", JSON.stringify(arrayOfTasks));
-}
-
 function getDataFromLocalStorage() {
-    let data = window.localStorage.getItem("tasks");
+
+    let data = localStorage.getItem("tasks");
     if (data) {
         let tasks = JSON.parse(data);
         addElementsToPageFrom(tasks);
     }
 }
-function deleteTaskWith(taskId) {
-    arrayOfTasks = arrayOfTasks.filter((task) => task.id != taskId);
-    addDataToLocalStorageFrom(arrayOfTasks);
-}
+tasksDiv.addEventListener("click", function (e) {
+    if (e.target.classList.contains("delete")) {
+        let taskId = e.target.parentElement.getAttribute("data-id");
+        arrayOfTasks = arrayOfTasks.filter(function (task) {
+            return task.id != taskId;
+        });
+        addDataToLocalStorageFrom(arrayOfTasks);
+        // e.target.parentElement.remove();
+        addElementsToPageFrom(arrayOfTasks);
+    }
+});

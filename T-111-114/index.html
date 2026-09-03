@@ -73,6 +73,10 @@
             cursor: pointer;
             font-weight: bold;
         }
+        .form-label {
+            display: flex;
+            align-items: center;
+        }
     </style>
     <select id="font" title="choose font">
         <option>Open Sans</option>
@@ -110,7 +114,7 @@
         <input type="text" id="name" placeholder="Name">
         <input type="email" id="email" placeholder="Email">
         <input type="number" id="age" placeholder="Age">
-        <select id="country">
+        <select name="country" id="country" title="country">
             <option value="Egypt">Egypt</option>
             <option value="Saudi Arabia">Saudi Arabia</option>
             <option value="UAE">UAE</option>
@@ -119,10 +123,13 @@
         </select>
     </form>
     <div class="container">
-        <div class="form">
-            <input type="text" class="input" />
-            <input type="submit" class="add" value="Add Task" />
-        </div>
+        <form class="form">
+                <label clas="form-label" for="input">Task:</label>
+                <input name="input" id="input" type="text" class="input" />
+            <button type="submit" class="add" value="Add Task">
+                submit
+            </button>
+        </form>
         <div class="tasks"></div>
     </div>
     <script src="main.js"></script>
