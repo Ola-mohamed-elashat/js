@@ -96,7 +96,7 @@ console.log(generator1.next()); // {value: "B", done: false}
 console.log(generator1.next()); // {value: "C", done: false}
 console.log(generator1.next()); // {value: "D", done: false}
 // task8
-import calc from "./mod-one.js";
-import { modOne } from "./mod-two.js";
+// import calc from "./mod-one.js";
+// import { modOne } from "./mod-two.js";
 
-console.log(calc(modOne.numOne, modOne.numTwo, modOne.numThree));
+// console.log(calc(modOne.numOne, modOne.numTwo, modOne.numThree));
