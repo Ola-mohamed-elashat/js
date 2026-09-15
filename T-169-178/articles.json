@@ -1,0 +1,44 @@
+
+[
+    {
+        "id": 1,
+        "author": "ola",
+        "category": "JavaScript",
+        "title": "Introduction to JavaScript",
+        "content": "JavaScript is a programming language used to make websites interactive"
+
+    },
+    {
+        "id": 2,
+        "author": "ola",
+        "category": "JavaScript",
+        "title": "Introduction to JavaScript",
+        "content": "JavaScript is a programming language used to make websites interactive"
+
+    },
+    {
+        "id": 3,
+        "author": "ahmed",
+        "category": "JavaScript",
+        "title": "Introduction to JavaScript",
+        "content": "JavaScript is a programming language used to make websites interactive"
+
+    },
+    {
+        "id": 4,
+        "author": "mohamed",
+        "category": "JavaScript",
+        "title": "Introduction to JavaScript",
+        "content": "JavaScript is a programming language used to make websites interactive"
+
+    },
+    {
+        "id": 5,
+        "author": "sara",
+        "category": "JavaScript",
+        "title": "Introduction to JavaScript",
+        "content": "JavaScript is a programming language used to make websites interactive"
+
+    }
+]
+
