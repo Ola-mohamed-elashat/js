@@ -1,10 +1,4 @@
-// function num(e){
-//     e.target.style.color ="red";
-// }
-// let p = document.querySelector(".test");
-// p.addEventListener("click",num)
-// task1
-const myData = [
+[
     {
         "userId": 10,
         "title": "Article Title Number 1",
@@ -56,21 +50,3 @@ const myData = [
         "description": "Article Description Number 10"
     }
 ]
-const myPromise = new Promise((resolve, reject) => {
-    resolve(myData);
-
-});
-const dataDiv = document.getElementById("data");
-myPromise.then((data) => {
-    const num = data.slice(0, 5);
-    num.forEach((article) => {
-        dataDiv.innerHTML += `
-<div>
-<h2>${article.title}</h2>
-<p>${article.description}</p>
-</div>
-   `;
-    });
-
-});
-// task2
