@@ -78,12 +78,12 @@ fetch("data.json")
     .then((response) => response.json())
     .then((data) => {
         const num = data.slice(0, 5);
-    num.forEach((article) => {
-        dataDiv.innerHTML += `
+        num.forEach((article) => {
+            dataDiv.innerHTML += `
 <div>
 <h2>${article.title}</h2>
 <p>${article.description}</p>
 </div>
    `;
-    });
+        });
     });
