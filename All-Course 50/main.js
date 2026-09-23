@@ -548,3 +548,46 @@ function checkBiggestNum(word) {
 console.log(checkBiggestNum("1500654")); // 6
 console.log(checkBiggestNum("8509507")); // 9
 // task5
+function replaceFirstWithLast(word) {
+    return word[word.length - 1] + word.slice(1, -1) + word[0]
+}
+console.log(replaceFirstWithLast("olzerE")); // Elzero
+console.log(replaceFirstWithLast("Hello")); // oelloH
+// task4
+function checkRange(n1, n2, n3, n4, n5) {
+    if (
+        n1 >= n4 && n1 <= n5 &&
+        n2 >= n4 && n2 <= n5 &&
+        n3 >= n4 && n3 <= n5
+    ) {
+        return "Yes All Numbers In Range"
+    } else {
+        return "Not All Numbers Is In Range"
+    }
+}
+console.log(checkRange(5, 10, 15, 5, 50)); // Yes All Numbers In Range
+console.log(checkRange(8, 4, 20, 2, 50)); // Yes All Numbers In Range
+console.log(checkRange(10, 15, 20, 5, 18)); // Not All Numbers Is In Range
+// task3
+let myString = "Hello Elzero Web School @ We Love Programming@ @#!@#$%%^&*";
+
+console.log(myString.split("@").slice(0, 2).join("@"));
+"Hello Elzero Web School @ We Love Programming"
+// task2
+function addEl(str) {
+    if (str === "") {
+        return str;
+    }
+    if (str.slice(0, 2) === "EL") {
+        return str;
+
+    }
+    return "EL" + str
+}
+console.log(addEl("")); // ""
+console.log(addEl("Elzero")); // Elzero
+console.log(addEl("zero")); // Elzero
+// task1
+let fileName = "Elzero.php";
+console.log(fileName.split(".")[0]); // Elzero
+console.log(fileName.split(".")[1]); // php
